@@ -3,7 +3,7 @@ import AutoTooltip from '@/components/auto-tooltip';
 import IconFont from '@/components/icon-font';
 import TagWrapper from '@/components/tags-wrapper';
 import ThemeTag from '@/components/tags-wrapper/theme-tag';
-import { useIntl } from '@umijs/max';
+import { getLocale, useIntl } from '@umijs/max';
 import { Typography } from 'antd';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -17,6 +17,14 @@ interface CatalogItemProps {
   activeId: number;
   data: CatalogItemType;
   onClick: (data: CatalogItemType) => void;
+}
+function getDescription(
+  data: CatalogItemType,
+  locale: string = getLocale()
+): string {
+  return locale === 'zh-CN' && data.description_zh_CN
+    ? data.description_zh_CN
+    : data.description;
 }
 const CatalogItem: React.FC<CatalogItemProps> = (props) => {
   const intl = useIntl();
@@ -85,12 +93,12 @@ const CatalogItem: React.FC<CatalogItemProps> = (props) => {
                   overflow: 'auto'
                 }}
               >
-                {data.description}
+                {getDescription(data)}
               </div>
             )
           }}
         >
-          {data.description}
+          {getDescription(data)}
         </Typography.Paragraph>
       </div>
       <div className="item-footer">

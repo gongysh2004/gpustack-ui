@@ -1,7 +1,7 @@
 export default {
   'models.button.deploy': '部署模型',
-  'models.title': '模型',
-  'models.title.edit': '编辑模型',
+  'models.title': '模型实例',
+  'models.title.edit': '编辑模型实例',
   'models.table.models': '模型',
   'models.table.name': '模型名称',
   'models.form.source': '来源',
@@ -16,7 +16,7 @@ export default {
   'models.form.partialoffload.tips':
     '启用 CPU 卸载时，如果 GPU 资源不足，则模型的一部分层将被卸载到 CPU 上，在没有 GPU 可用时，会使用纯 CPU 推理。',
   'models.form.distribution.tips':
-    '允许在单个 Worker 资源不足时，将部分计算卸载到一个或多个远程 Worker。',
+    '允许在单个 GPU 或 工作节点 资源不足时，将部分计算卸载到一个或多个远程 工作节点。',
   'models.openinplayground': '在 Playground 中打开',
   'models.instances': '实例',
   'models.table.replicas.edit': '调整副本数',
@@ -25,7 +25,7 @@ export default {
   'model.deploy.sort': '排序',
   'model.deploy.search.placeholder': '按 <kbd>/</kbd> 开始搜索模型',
   'model.form.ollamatips':
-    '提示：以下为 GPUStack 预设的 Ollama 模型，请选择你想要的模型或者直接在右侧表单 【{name}】 输入框中输入你要部署的模型。',
+    '提示：以下为预设的 Ollama 模型，请选择你想要的模型或者直接在右侧表单 【{name}】 输入框中输入你要部署的模型。',
   'models.sort.name': '名称',
   'models.sort.size': '大小',
   'models.sort.likes': '点赞量',
@@ -48,13 +48,13 @@ export default {
   'models.form.scheduletype.auto': '自动',
   'models.form.scheduletype.manual': '手动',
   'models.form.scheduletype.auto.tips':
-    '自动根据当前资源情况部署模型实例到合适的 GPU/Worker。',
+    '自动根据当前资源情况部署模型实例到合适的 GPU/工作节点。',
   'models.form.scheduletype.manual.tips':
-    '手动调度可指定模型实例部署的 GPU/Worker。',
+    '手动调度可指定模型实例部署的 GPU/工作节点。',
   'models.form.manual.schedule': '手动调度',
   'models.table.gpuindex': 'GPU 序号',
   'models.table.backend': '后端',
-  'models.table.acrossworker': '跨 Worker 推理',
+  'models.table.acrossworker': '跨 工作节点 推理',
   'models.table.cpuoffload': 'CPU 卸载',
   'models.table.layers': '层',
   'models.form.backend': '后端',
@@ -90,7 +90,7 @@ export default {
   'models.form.backend.mindie':
     '用于非 GGUF 格式模型，仅支持昇腾 910B 和 310P。',
   'models.form.search.gguftips':
-    '当 macOS 或 Windows 作 Worker 时勾选 GGUF（搜索语音模型时取消勾选）',
+    '当 macOS 或 Windows 作 工作节点 时勾选 GGUF（搜索音频模型时取消勾选）',
   'models.form.button.addlabel': '添加标签',
   'models.filter.category': '按类别筛选',
   'models.list.more.logs': '查看更多',

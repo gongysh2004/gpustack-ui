@@ -29,7 +29,7 @@ const Resources = () => {
   const items: TabsProps['items'] = [
     {
       key: 'workers',
-      label: 'Workers',
+      label: intl.formatMessage({ id: 'resources.table.wokers' }),
       children: <Workers />
     },
     {

@@ -1,4 +1,4 @@
-import LogoIcon from '@/assets/images/gpustack-logo.png';
+import LogoIcon from '@/assets/images/ailinks-logo.png';
 import { initialPasswordAtom, userAtom } from '@/atoms/user';
 import LangSelect from '@/components/lang-select';
 import SealInput from '@/components/seal-form/seal-input';
