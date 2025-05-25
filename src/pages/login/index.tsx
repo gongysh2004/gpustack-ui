@@ -3,7 +3,7 @@ import { userAtom } from '@/atoms/user';
 import DarkMask from '@/components/dark-mask';
 import Footer from '@/components/footer';
 import useUserSettings from '@/hooks/use-user-settings';
-import { useModel } from '@umijs/max';
+import { useIntl, useModel } from '@umijs/max';
 import { ConfigProvider, theme } from 'antd';
 import { useAtom } from 'jotai';
 import { useEffect } from 'react';
@@ -57,6 +57,7 @@ const FormWrapper = styled.div`
 
 const Login = () => {
   const { themeData, userSettings, isDarkTheme } = useUserSettings();
+  const intl = useIntl();
   const [userInfo, setUserInfo] = useAtom(userAtom);
   const { initialState, setInitialState } = useModel('@@initialState') || {};
 
@@ -79,7 +80,7 @@ const Login = () => {
   }, [userInfo]);
 
   useEffect(() => {
-    document.title = 'GPUStack';
+    document.title = intl.formatMessage({ id: 'users.login.doctitle' });
   }, []);
 
   return (

@@ -1,9 +1,11 @@
-import LogoIcon from '@/assets/images/gpustack-logo.png';
+import LogoIconDark from '@/assets/images/ailinks-logo-dark.png';
+import LogoIcon from '@/assets/images/ailinks-logo.png';
 import { initialPasswordAtom, userAtom } from '@/atoms/user';
 import LangSelect from '@/components/lang-select';
 import SealInput from '@/components/seal-form/seal-input';
 import ThemeDropActions from '@/components/theme-toggle/theme-drop-actions';
 import externalLinks from '@/constants/external-links';
+import useUserSettings from '@/hooks/use-user-settings';
 import {
   CRYPT_TEXT,
   REMEMBER_ME_KEY,
@@ -48,6 +50,7 @@ const LoginForm = () => {
   const { initialState, setInitialState } = useModel('@@initialState') || {};
   const intl = useIntl();
   const [form] = Form.useForm();
+  const { userSettings } = useUserSettings();
 
   const renderWelCome = useMemo(() => {
     return (
@@ -63,14 +66,14 @@ const LoginForm = () => {
         <div className="flex-center">
           <span>{intl?.formatMessage({ id: 'users.login.title' })}</span>
           <img
-            src={LogoIcon}
+            src={userSettings.theme === 'realDark' ? LogoIconDark : LogoIcon}
             alt="logo"
-            style={{ height: '24px', marginLeft: 10 }}
+            style={{ height: '38px', marginLeft: 10 }}
           />
         </div>
       </div>
     );
-  }, [intl]);
+  }, [intl, userSettings.theme]);
 
   const gotoDefaultPage = async (userInfo: any) => {
     checkDefaultPage(userInfo, true);

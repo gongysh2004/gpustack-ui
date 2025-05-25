@@ -203,7 +203,7 @@ export default {
   'common.form.password': 'Пароль',
   'common.form.username': 'Имя пользователя',
   'common.login.rember': 'Запомнить меня',
-  'settings.company': 'SEAL',
+  'settings.company': '99AILinks',
   'common.button.help': 'Помощь',
   'common.button.feedback': 'Обратная связь',
   'common.button.docs': 'Документация',
@@ -245,7 +245,8 @@ export default {
   'common.button.forgotpassword': 'Забыли пароль?',
   'common.appearance.theme': 'Тема',
   'common.page.wentwrong': 'Что-то пошло не так.',
-  'common.page.refresh.tips': 'Упс! Что-то пошло не так. Попробуйте обновить страницу.'
+  'common.page.refresh.tips':
+    'Упс! Что-то пошло не так. Попробуйте обновить страницу.'
 };
 
 // ========== To-Do: Translate Keys (Remove After Translation) ==========

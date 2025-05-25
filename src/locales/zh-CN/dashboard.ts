@@ -1,7 +1,7 @@
 export default {
   'dashboard.title': '概览',
-  'dashboard.workers': 'Workers',
-  'dashboard.models': '模型',
+  'dashboard.workers': '工作节点',
+  'dashboard.models': '模型实例',
   'dashboard.totalgpus': 'GPUs',
   'dashboard.allocategpus': '已分配 GPU 数量',
   'dashboard.instances': '实例',
@@ -18,7 +18,7 @@ export default {
   'dashboard.apirequest': 'API 请求',
   'dashboard.tokens': 'Token 使用量',
   'dashboard.topusers': '用户排行',
-  'dashboard.activeModels': '活跃模型',
+  'dashboard.activeModels': '活跃模型实例',
   'dashboard.activeModels.name': '模型名称',
   'dashboard.runninginstances': '运行实例',
   'dashboard.allocatevram': '已分配显存 / 内存'

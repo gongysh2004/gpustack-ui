@@ -35,7 +35,7 @@ import 'overlayscrollbars/overlayscrollbars.css';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import Exception from './Exception';
 import './Layout.css';
-import { LogoIcon, SLogoIcon } from './Logo';
+import { LogoIcon, LogoIconDark, SLogoIcon } from './Logo';
 import ErrorBoundary from './error-boundary';
 import { getRightRenderContent } from './rightRender';
 import { patchRoutes } from './runtime';
@@ -458,7 +458,13 @@ export default (props: any) => {
         menu={{
           locale: true
         }}
-        logo={collapsed ? SLogoIcon : LogoIcon}
+        logo={
+          collapsed
+            ? SLogoIcon
+            : userSettings.isDarkTheme
+              ? LogoIconDark
+              : LogoIcon
+        }
         menuItemRender={menuItemRender}
         itemRender={itemRender}
         disableContentMargin

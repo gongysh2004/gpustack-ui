@@ -1,4 +1,4 @@
-import Logo from '@/assets/images/gpustack-logo.png';
+import Logo from '@/assets/images/ailinks-logo.png';
 import { GPUStackVersionAtom, UpdateCheckAtom, userAtom } from '@/atoms/user';
 import { getAtomStorage } from '@/atoms/utils';
 import externalLinks from '@/constants/external-links';
