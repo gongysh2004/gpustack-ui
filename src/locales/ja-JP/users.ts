@@ -26,6 +26,7 @@ export default {
   'users.password.confirm.empty': '新しいパスワードを確認してください。',
   'users.password.confirm.error': '入力された2つのパスワードが一致しません。',
   'users.login.title': 'ログイン',
+  'users.login.doctitle': '99AILinks: インテリジェントサービスプラットフォーム',
   'users.version.islatest': 'GPUStack {version} は最新バージョンです',
   'users.version.update': 'GPUStack {version} が利用可能です'
 };

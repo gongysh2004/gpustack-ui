@@ -26,6 +26,7 @@ export default {
   'users.password.confirm.empty': 'Подтвердите новый пароль',
   'users.password.confirm.error': 'Пароли не совпадают',
   'users.login.title': 'Вход в',
+  'users.login.doctitle': '99AILinks: Интеллектуальная платформа услуг',
   'users.version.islatest': 'GPUStack {version} — последняя версия',
   'users.version.update': 'Доступно обновление GPUStack {version}'
 };
