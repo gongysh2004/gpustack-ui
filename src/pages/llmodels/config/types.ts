@@ -149,6 +149,7 @@ export interface CatalogItem {
   name: string;
   id: number;
   description: string;
+  description_zh_CN?: string;
   home: string;
   icon: string;
   categories: string[];

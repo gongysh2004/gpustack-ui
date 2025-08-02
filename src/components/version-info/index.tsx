@@ -1,14 +1,15 @@
-import Logo from '@/assets/images/gpustack-logo.png';
-import { GPUStackVersionAtom, UpdateCheckAtom, userAtom } from '@/atoms/user';
+import LogoDark from '@/assets/images/ailinks-logo-dark.png';
+import Logo from '@/assets/images/ailinks-logo.png';
+import { GPUStackVersionAtom, UpdateCheckAtom } from '@/atoms/user';
 import { getAtomStorage } from '@/atoms/utils';
-import externalLinks from '@/constants/external-links';
-import { Button } from 'antd';
+import useUserSettings from '@/hooks/use-user-settings';
 import React from 'react';
 import './index.less';
 
 const VersionInfo: React.FC<{ intl: any }> = ({ intl }) => {
   const latestVersion = getAtomStorage(UpdateCheckAtom).latest_version;
   const currentVersion = getAtomStorage(GPUStackVersionAtom)?.version;
+  const { isDarkTheme } = useUserSettings();
 
   const isProd =
     currentVersion?.indexOf('rc') === -1 &&
@@ -19,7 +20,7 @@ const VersionInfo: React.FC<{ intl: any }> = ({ intl }) => {
   return (
     <div className="version-box">
       <div className="img">
-        <img src={Logo} alt="logo" />
+        <img src={isDarkTheme ? LogoDark : Logo} alt="logo" />
       </div>
 
       <div className="ver">
@@ -51,7 +52,7 @@ const VersionInfo: React.FC<{ intl: any }> = ({ intl }) => {
           </span>
         )}
       </div>
-      {getAtomStorage(userAtom)?.is_admin && isProd && (
+      {/* {getAtomStorage(userAtom)?.is_admin && isProd && (
         <div className="upgrade-text">
           <span className="m-l-5">
             {latestVersion &&
@@ -75,7 +76,7 @@ const VersionInfo: React.FC<{ intl: any }> = ({ intl }) => {
             {intl.formatMessage({ id: 'common.text.changelog' })}
           </Button>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

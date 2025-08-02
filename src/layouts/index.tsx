@@ -35,7 +35,7 @@ import 'overlayscrollbars/overlayscrollbars.css';
 import { useEffect, useMemo, useState } from 'react';
 import Exception from './Exception';
 import './Layout.css';
-import { LogoIcon, SLogoIcon } from './Logo';
+import { LogoIcon, LogoIconDark, SLogoIcon } from './Logo';
 import ErrorBoundary from './error-boundary';
 import { getRightRenderContent } from './rightRender';
 import { patchRoutes } from './runtime';
@@ -523,7 +523,13 @@ export default (props: any) => {
           type: 'group'
         }}
         splitMenus={true}
-        logo={collapsed ? SLogoIcon : LogoIcon}
+        logo={
+          collapsed
+            ? SLogoIcon
+            : userSettings.isDarkTheme
+              ? LogoIconDark
+              : LogoIcon
+        }
         menuContentRender={menuContentRender}
         disableContentMargin
         fixSiderbar

@@ -4,9 +4,6 @@ import IconFont from '@/components/icon-font';
 import externalLinks from '@/constants/external-links';
 import langConfigMap from '@/locales/lang-config-map';
 import {
-  DiscordOutlined,
-  GithubOutlined,
-  HomeOutlined,
   InfoCircleOutlined,
   LogoutOutlined,
   MoonOutlined,
@@ -82,30 +79,30 @@ export const getRightRenderContent = (opts: {
   }
 
   const helpList = [
-    {
-      key: 'site',
-      icon: <HomeOutlined />,
-      label: 'GPUStack',
-      url: externalLinks.site
-    },
-    {
-      key: 'github',
-      icon: <GithubOutlined />,
-      label: intl.formatMessage({ id: 'common.issue.report' }),
-      url: externalLinks.reportIssue
-    },
-    {
-      key: 'faq',
-      icon: <IconFont type="icon-fankuifaqs"></IconFont>,
-      label: intl.formatMessage({ id: 'common.button.faq' }),
-      url: externalLinks.faq
-    },
-    {
-      key: 'Discord',
-      icon: <DiscordOutlined />,
-      label: 'Discord',
-      url: externalLinks.discord
-    },
+    // {
+    //   key: 'site',
+    //   icon: <HomeOutlined />,
+    //   label: 'GPUStack',
+    //   url: externalLinks.site
+    // },
+    // {
+    //   key: 'github',
+    //   icon: <GithubOutlined />,
+    //   label: intl.formatMessage({ id: 'common.issue.report' }),
+    //   url: externalLinks.reportIssue
+    // },
+    // {
+    //   key: 'faq',
+    //   icon: <IconFont type="icon-fankuifaqs"></IconFont>,
+    //   label: intl.formatMessage({ id: 'common.button.faq' }),
+    //   url: externalLinks.faq
+    // },
+    // {
+    //   key: 'Discord',
+    //   icon: <DiscordOutlined />,
+    //   label: 'Discord',
+    //   url: externalLinks.discord
+    // },
     {
       key: 'docs',
       icon: <ReadOutlined />,

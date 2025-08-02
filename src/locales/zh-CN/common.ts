@@ -198,7 +198,7 @@ export default {
   'common.form.password': '密码',
   'common.form.username': '用户名',
   'common.login.rember': '记住我',
-  'settings.company': '数澈软件',
+  'settings.company': '江苏九州云数智科技有限公司',
   'common.button.help': '帮助',
   'common.button.feedback': '反馈',
   'common.button.docs': '文档',

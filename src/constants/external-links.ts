@@ -1,5 +1,5 @@
 const externalLinks = {
-  documentation: 'https://docs.gpustack.ai/',
+  documentation: '/manual/index.html',
   github: 'https://github.com/gpustack/gpustack',
   discord: 'https://discord.gg/VXYJzuaqwD',
   site: 'https://gpustack.ai/',

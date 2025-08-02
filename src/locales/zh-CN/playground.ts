@@ -7,7 +7,7 @@ export default {
   'playground.assistant': 'AI助手',
   'playground.newMessage': '新消息',
   'playground.viewcode': '查看代码',
-  'playground.model': '模型',
+  'playground.model': '模型实例',
   'playground.parameters': '参数',
   'playground.viewcode.info':
     '你可以使用以下代码将当前的提示和设置集成到你的应用程序中。',
